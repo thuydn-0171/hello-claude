@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page đơn giản, responsive và hiện đại">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">MyApp</div>
+        <ul class="nav-links">
+          <li><a href="#features">Tính năng</a></li>
+          <li><a href="#cta">Liên hệ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Chào mừng đến với Landing Page</h1>
+          <p class="subtitle">Đây là một landing page đơn giản, hiện đại và responsive</p>
+          <button class="btn btn-primary" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+            Khám phá thêm
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Tính năng nổi bật</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Nhanh chóng</h3>
+            <p>Load nhanh, hiệu suất cao, tối ưu cho tất cả thiết bị</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive</h3>
+            <p>Hoạt động tốt trên desktop, tablet và mobile</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>Hiện đại</h3>
+            <p>Thiết kế sạch sẽ, animation mượt mà, UX tốt</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <h2>Sẵn sàng bắt đầu?</h2>
+        <p>Liên hệ với chúng tôi hoặc đăng ký để nhận thêm thông tin</p>
+        <form class="cta-form" onsubmit="handleFormSubmit(event)">
+          <input type="email" placeholder="Email của bạn" required>
+          <button type="submit" class="btn btn-primary">Đăng ký</button>
+        </form>
+        <p class="form-message" id="formMessage"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 MyApp. Tất cả quyền được bảo lưu.</p>
+      <p><a href="#top">Lên đầu trang</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "description": "Custom keyboard bindings for Claude Code",
+  "bindings": {
+    "dev": {
+      "description": "Start development server",
+      "command": "/dev",
+      "keys": ["ctrl+shift+d"]
+    },
+    "build": {
+      "description": "Build for production",
+      "command": "/build",
+      "keys": ["ctrl+shift+b"]
+    },
+    "check-rules": {
+      "description": "Check rules compliance",
+      "command": "/check-rules",
+      "keys": ["ctrl+shift+r"]
+    },
+    "validate-rules": {
+      "description": "Validate RULES.md files",
+      "command": "/validate-rules",
+      "keys": ["ctrl+shift+v"]
+    },
+    "validate-agents": {
+      "description": "Validate agent configurations",
+      "command": "/validate-agents",
+      "keys": ["ctrl+shift+a"]
+    },
+    "sync-memory": {
+      "description": "Sync and validate memory",
+      "command": "/sync-memory",
+      "keys": ["ctrl+shift+m"]
+    }
+  }
+}

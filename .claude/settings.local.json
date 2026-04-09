@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude:*)",
+      "Skill(update-config)",
+      "Bash(grep:*)",
+      "Bash(code:*)"
+    ],
+    "global": [
+      "read",
+      "bash",
+      "edit",
+      "write"
+    ],
+    "agents": [
+      "all"
+    ],
+    "hooks": "enabled"
+  },
+  "model": "haiku",
+  "description": "Local settings overrides (not committed to git)",
+  "fast": false,
+  "memory": {
+    "enabled": true,
+    "location": ".claude/agent-memory",
+    "autosync": true
+  }
+}

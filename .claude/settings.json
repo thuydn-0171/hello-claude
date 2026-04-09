@@ -1,0 +1,52 @@
+{
+  "model": "haiku",
+  "fastMode": false,
+  "permissions": {
+    "allow": [
+      "Bash(claude:*)",
+      "Skill(update-config)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "filesystem",
+    "git",
+    "postgres"
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git commit*)",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/pre-commit.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git commit*)",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-commit.sh",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/task-submit.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
