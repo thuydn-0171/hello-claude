@@ -1,9 +1,7 @@
+import Signup from './Signup';
+
 function App() {
-  return (
-    <div>
-      <h1>Hello MC Thuy</h1>
-    </div>
-  );
+  return <Signup />;
 }
 
 export default App;
