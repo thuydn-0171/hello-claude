@@ -4,7 +4,8 @@
       "Bash(claude:*)",
       "Skill(update-config)",
       "Bash(grep:*)",
-      "Bash(code:*)"
+      "Bash(code:*)",
+      "mcp__filesystem__directory_tree"
     ],
     "global": [
       "read",
